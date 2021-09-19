@@ -4,7 +4,7 @@ on:
   # workflow_run:
   #   workflows: ["DevSecOps"]
   #   branches: 
-  #     - development
+  #     - AWS-DEV
   #     - master
   #   types: 
   #     - completed
@@ -14,10 +14,10 @@ on:
 
  push:
    branches:
-     - development
+     - AWS-DEV
  pull_request:
    branches:
-     - development
+     - AWS-DEV
  workflow_dispatch: null    
 
 env:

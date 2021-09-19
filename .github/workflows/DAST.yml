@@ -2,10 +2,10 @@ name: DAST
 'on':
   push:
     branches:
-      - development
+      - AWS-DEV
   pull_request:
     branches:
-      - development
+      - AWS-DEV
   workflow_dispatch: null
   
 jobs:
