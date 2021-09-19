@@ -4,7 +4,7 @@ on:
   # workflow_run:
   #   workflows: ["DevSecOps"]
   #   branches: 
-  #     - development
+  #     - GCP-DEV
   #     - master
   #   types: 
   #     - completed
@@ -14,10 +14,10 @@ on:
 
  push:
    branches:
-     - development
+     - GCP-DEV
  pull_request:
    branches:
-     - development
+     - GCP-DEV
  workflow_dispatch: null    
 
 env:
