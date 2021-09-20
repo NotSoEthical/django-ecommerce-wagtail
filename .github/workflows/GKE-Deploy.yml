@@ -83,7 +83,6 @@ jobs:
         kubectl get services -o wide
         kubectl get pods 
         kubectl exec deploy/exam-deployment -- ls;id;pwd
-        kubectl exec deploy/exam-deployment -- python -V
  # kubectl exec deploy/exam-deployment -- echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'pass')" | python manage.py shell
  # kubectl exec deploy/exam-deployment -- echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('${{ secrets.DJANGO_SU_NAME }}'', '${{ secrets.DJANGO_SU_EMAIL }}', '${{ secrets.DJANGO_SU_PASSWORD }}')" | python manage.py shell
         
