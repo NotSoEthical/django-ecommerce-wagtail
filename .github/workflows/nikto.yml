@@ -26,5 +26,5 @@ jobs:
       # Install and run Nikto scanner
       - name: Install and run Nikto scanner
         run: |
-          apt-get install nikto -y
+          apt-get sudo install nikto -y
           nikto -h
