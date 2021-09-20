@@ -7,8 +7,8 @@ on:
    branches:
      - GCP-DEV
   # workflow_dispatch: null
-  
-  env:
+
+env:
     target_url: "${{ secrets.EXT_IP }}"
 jobs:
   Build-Test:
