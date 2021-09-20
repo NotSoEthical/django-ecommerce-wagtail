@@ -4,11 +4,10 @@ name: Test Nikto scanner
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  # push:
-  #   branches: [ GCP-DEV ]
-  # pull_request:
-  #   branches: [ GCP-DEV ]
+  workflow_run:
+    workflows: ["Run Selenium Tests"]
+    types: 
+      - completed
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,8 +27,8 @@ jobs:
         run: |
           sudo apt-get install nikto -y
           nikto -h ${{ secrets.EXT_IP }}
-      # - name: artifacts
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #       name: DAST-artifact
-      #       path: ${{ github.workspace }}
+      - name: artifacts
+        uses: actions/upload-artifact@v2
+        with:
+            name: DAST-artifact
+            path: ${{ github.workspace }}

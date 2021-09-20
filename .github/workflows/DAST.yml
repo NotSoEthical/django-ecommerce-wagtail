@@ -1,4 +1,4 @@
-name: DAST
+name: DAST with OWASP ZAP
 on:
   # push:
   #   branches:
@@ -19,7 +19,7 @@ on:
 
 
 jobs:
-   DAST_Zap:
+   DAST:
     name: DAST Zap
     runs-on: ubuntu-latest 
     steps:

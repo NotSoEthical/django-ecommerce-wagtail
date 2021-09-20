@@ -5,13 +5,12 @@ name: DAST with Wapiti3 scanner
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ GCP-DEV ]
-  pull_request:
-    branches: [ GCP-DEV ]
+  workflow_run:
+    workflows: ["Run Selenium Tests"]
+    types: 
+      - completed
+  workflow_dispatch: null   
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
