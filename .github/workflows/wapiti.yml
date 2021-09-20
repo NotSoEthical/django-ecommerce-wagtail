@@ -33,3 +33,4 @@ jobs:
         with:
             name: DAST-artifact
             path: /home/runner/.wapiti/generated_report
+
