@@ -1,11 +1,19 @@
 name: Run Selenium Tests
 on:
- push:
-   branches:
-     - GCP-DEV
- pull_request:
-   branches:
-     - GCP-DEV
+  workflow_run:
+    workflows: ["Test-Pipeline"]
+    branches: [GCP-DEV]
+    types: 
+      - completed
+  workflow_dispatch: null    
+
+
+#  push:
+#    branches:
+#      - GCP-DEV
+#  pull_request:
+#    branches:
+#      - GCP-DEV
   # workflow_dispatch: null
 
 env:
