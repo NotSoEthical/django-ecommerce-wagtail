@@ -6,9 +6,9 @@ on:
  pull_request:
    branches:
      - GCP-DEV
-  workflow_dispatch: null
-env:
-  target_url: "${{ secrets.EXT_IP }}"
+  # workflow_dispatch: null
+  env:
+    target_url: "${{ secrets.EXT_IP }}"
 jobs:
   Build-Test:
     runs-on: ubuntu-latest
