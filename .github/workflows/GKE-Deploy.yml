@@ -10,8 +10,7 @@ on:
   #     - completed
   # workflow_dispatch: null   
  
-      
-
+  
  push:
    branches:
      - GCP-DEV
