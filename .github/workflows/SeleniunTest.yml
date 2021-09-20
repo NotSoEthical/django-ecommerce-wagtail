@@ -1,7 +1,7 @@
 name: Run Selenium Tests
 on:
   workflow_run:
-    workflows: ["Test-Pipeline"]
+    workflows: ["Build and Deploy to GKE"]
     branches: [GCP-DEV]
     types: 
       - completed
