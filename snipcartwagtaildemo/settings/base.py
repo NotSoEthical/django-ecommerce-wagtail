@@ -21,8 +21,11 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 
+<<<<<<< HEAD
 # Application definition
 
+=======
+>>>>>>> default
 INSTALLED_APPS = [
     'home',
     'search',
@@ -55,11 +58,16 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+<<<<<<< HEAD
     'django.middleware.csrf.CsrfViewMiddleware',
+=======
+   # 'django.middleware.csrf.CsrfViewMiddleware',
+>>>>>>> default
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+<<<<<<< HEAD
 
     'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
@@ -67,6 +75,62 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'snipcartwagtaildemo.urls'
 
+=======
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'wagtail.core.middleware.SiteMiddleware',
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+    'csp.middleware.CSPMiddleware'
+    
+
+]
+
+X_FRAME_OPTIONS = 'DENY'
+#X-Content-Type-Options
+SECURE_CONTENT_TYPE_NOSNIFF = True
+##CSRF_COOKIE_SECURE = True
+
+ROOT_URLCONF = 'snipcartwagtaildemo.urls'
+
+# CSP_DEFAULT_SRC = ("'self'", )
+# CSP_STYLE_SRC = ("'self'", 
+#     "stackpath.bootstrapcdn.com")
+
+# CSP_SCRIPT_SRC = ("'self'",
+#     "*")
+
+CSP_IMG_SRC = ("'self'",
+    "*.medium.com",
+    "memegenerator.net",
+    "*.memegenerator.net")
+CSP_DEFAULT_SRC = ("'self'", )
+CSP_SCRIPT_SRC = ("'self'",
+    "ajax.cloudflare.com",
+    "static.cloudflareinsights.com",
+    "www.google-analytics.com",
+    "ssl.google-analytics.com",
+    "cdn.ampproject.org",
+    "www.googletagservices.com",
+    "*.unpkg.com",
+    "unpkg.com")
+
+CSP_STYLE_SRC = ("'self'", 
+    "stackpath.bootstrapcdn.com",
+    "unpkg.com",
+    "*.unpkg.com")
+
+CSP_OBJECT_SRC = ("'self'", )
+CSP_BASE_URI = ("'self'", )
+CSP_FRAME_ANCESTORS = ("'self'", )
+CSP_FORM_ACTION = ("'self'", )
+CSP_INCLUDE_NONCE_IN = ('script-src', )
+CSP_MANIFEST_SRC = ("'self'", )
+CSP_WORKER_SRC = ("'self'", )
+CSP_MEDIA_SRC = ("'self'", )
+
+
+
+
+>>>>>>> default
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -88,7 +152,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'snipcartwagtaildemo.wsgi.application'
 
+<<<<<<< HEAD
 
+=======
+#
+>>>>>>> default
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
