@@ -6,9 +6,9 @@ name: Test-Pipeline
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ GCP-DEV ]
+    branches: [ AWS-DEV ]
   pull_request:
-    branches: [ GCP-DEV ]
+    branches: [ AWS-DEV ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
