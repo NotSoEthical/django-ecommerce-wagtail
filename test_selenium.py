@@ -23,4 +23,4 @@ def test_data():
     driver.get(target_url)
     element = driver.find_element_by_tag_name("h1")
     print("########## Checking for Bootcamp pattern on the page ##########")
-    assert element.text == "Store information"
+    assert element.text == "bootcamp"
