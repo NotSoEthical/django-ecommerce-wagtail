@@ -6,4 +6,4 @@ django-heroku
 django-storages
 boto3
 dj-static==0.0.6
-
+django-csp

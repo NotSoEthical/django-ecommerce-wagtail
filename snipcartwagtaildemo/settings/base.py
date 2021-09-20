@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'csp.middleware.CSPMiddleware',
    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -67,7 +68,7 @@ MIDDLEWARE = [
 X_FRAME_OPTIONS = 'DENY'
 #X-Content-Type-Options
 SECURE_CONTENT_TYPE_NOSNIFF = True
-##CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 ROOT_URLCONF = 'snipcartwagtaildemo.urls'
 
