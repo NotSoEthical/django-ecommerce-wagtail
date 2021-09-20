@@ -28,8 +28,8 @@ jobs:
         run: |
           sudo apt-get install nikto -y
           nikto -h ${{ secrets.EXT_IP }}
-      - name: artifacts
-        uses: actions/upload-artifact@v2
-        with:
-            name: DAST-artifact
-            path: ${{ github.workspace }}
+      # - name: artifacts
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #       name: DAST-artifact
+      #       path: ${{ github.workspace }}
