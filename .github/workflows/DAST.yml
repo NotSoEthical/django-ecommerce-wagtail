@@ -1,5 +1,5 @@
 name: DAST
-'on':
+on:
   # push:
   #   branches:
   #     - GCP-DEV
@@ -9,12 +9,9 @@ name: DAST
   # workflow_dispatch: null
   workflow_run:
     workflows: ["Build and Deploy to GKE"]
-    branches: 
-      - GCP-DEV
-      - master
     types: 
       - completed
-  workflow_dispatch: null   
+ 
   
 
 

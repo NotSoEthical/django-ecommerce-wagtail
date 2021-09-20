@@ -77,10 +77,8 @@ jobs:
       run: |-
         ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
         ./kustomize build . | kubectl apply -f -
-        kubectl rollout status deployment/$DEPLOYMENT_NAME
+        kubectl rollout status deploy/$DEPLOYMENT_NAME
         kubectl get services -o wide
-        kubectl get pods 
-        kubectl exec deploy/exam-deployment -- ls;id;pwd
  # kubectl exec deploy/exam-deployment -- echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'pass')" | python manage.py shell
  # kubectl exec deploy/exam-deployment -- echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('${{ secrets.DJANGO_SU_NAME }}'', '${{ secrets.DJANGO_SU_EMAIL }}', '${{ secrets.DJANGO_SU_PASSWORD }}')" | python manage.py shell
         
