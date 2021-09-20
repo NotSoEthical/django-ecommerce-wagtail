@@ -9,6 +9,7 @@ on:
     branches: [ GCP-DEV ]
   pull_request:
     branches: [ GCP-DEV ]
+    
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
