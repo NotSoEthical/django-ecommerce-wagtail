@@ -5,10 +5,10 @@ name: Test Nikto scanner
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
-  # push:
-  #   branches: [ GCP-DEV ]
-  # pull_request:
-  #   branches: [ GCP-DEV ]
+  push:
+    branches: [ GCP-DEV ]
+  pull_request:
+    branches: [ GCP-DEV ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,10 +24,10 @@ jobs:
     steps:
 
       # Install and run Nikto scanner
-      - name: Install and run Nikto scanner
+      - name: Install and run Wapiti scanner
         run: |
-          sudo apt-get install nikto -y
-          nikto -h ${{ secrets.EXT_IP }}
+          pip install wapiti3
+          wapiti -u ${{ secrets.EXT_IP }}
       # - name: artifacts
       #   uses: actions/upload-artifact@v2
       #   with:
