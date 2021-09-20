@@ -1,17 +1,17 @@
 name: DAST
 on:
-  # push:
-  #   branches:
-  #     - GCP-DEV
-  # pull_request:
-  #   branches:
-  #     - GCP-DEV
-  # workflow_dispatch: null
-  workflow_run:
-    workflows: ["Build and Deploy to GKE"]
-    types: 
-      - completed
- 
+  push:
+    branches:
+      - GCP-DEV
+  pull_request:
+    branches:
+      - GCP-DEV
+  workflow_dispatch: null
+  # workflow_run:
+  #   workflows: ["Build and Deploy to GKE"]
+  #   types: 
+  #     - completed
+  # workflow_dispatch: null   
   
 
 
