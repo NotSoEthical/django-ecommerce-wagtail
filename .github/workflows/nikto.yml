@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  Hello_PA:
+  Test Nikto:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -26,5 +26,5 @@ jobs:
       # Install and run Nikto scanner
       - name: Install and run Nikto scanner
         run: |
-          apt-get sudo install nikto -y
+          sudo apt-get install nikto -y
           nikto -h
