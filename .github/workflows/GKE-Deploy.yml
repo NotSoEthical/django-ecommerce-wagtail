@@ -1,21 +1,22 @@
 name: Build and Deploy to GKE
 
 on:
-  workflow_run:
-    workflows: ["DevSecOps"]
-    branches: 
-      - GCP-DEV
-    types: 
-      - completed
-  workflow_dispatch: null   
+  # workflow_run:
+  #   workflows: ["DevSecOps"]
+  #   branches: 
+  #     - GCP-DEV
+  #   types: 
+  #     - completed
+  # workflow_dispatch: null   
   
-#  push:
-#    branches:
-#      - GCP-DEV
-#  pull_request:
-#    branches:
-#      - GCP-DEV
-#  workflow_dispatch: null    
+ push:
+   branches:
+     - GCP-DEV
+ pull_request:
+   branches:
+     - GCP-DEV
+ workflow_dispatch: null  
+ 
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }} # GKE Project Name
