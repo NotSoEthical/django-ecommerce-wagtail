@@ -21,11 +21,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 
-<<<<<<< HEAD
-# Application definition
 
-=======
->>>>>>> default
 INSTALLED_APPS = [
     'home',
     'search',
@@ -58,31 +54,15 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-<<<<<<< HEAD
-    'django.middleware.csrf.CsrfViewMiddleware',
-=======
    # 'django.middleware.csrf.CsrfViewMiddleware',
->>>>>>> default
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-<<<<<<< HEAD
-
     'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
-ROOT_URLCONF = 'snipcartwagtaildemo.urls'
-
-=======
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-    'wagtail.core.middleware.SiteMiddleware',
-    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
-    'csp.middleware.CSPMiddleware'
-    
-
-]
 
 X_FRAME_OPTIONS = 'DENY'
 #X-Content-Type-Options
@@ -130,7 +110,6 @@ CSP_MEDIA_SRC = ("'self'", )
 
 
 
->>>>>>> default
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -152,11 +131,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'snipcartwagtaildemo.wsgi.application'
 
-<<<<<<< HEAD
-
-=======
-#
->>>>>>> default
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
