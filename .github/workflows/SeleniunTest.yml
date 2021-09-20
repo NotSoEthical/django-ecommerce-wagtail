@@ -24,4 +24,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install -U pytest selenium
       - name: Run tests with pytest
-        run: pytest  --capture=no --verbose selenium_checks.py
+        run: pytest  --capture=no --verbose test_selenium.py

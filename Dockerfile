@@ -17,6 +17,7 @@ RUN pip install WhiteNoise
 COPY . /code/
 WORKDIR /code/
 
+
 RUN python manage.py migrate
 RUN useradd wagtail
 RUN chown -R wagtail /code
