@@ -2,7 +2,7 @@ name: Run Selenium Tests
 on:
   workflow_run:
     workflows: ["Test-Pipeline"]
-    branches: [GCP-DEV]
+    branches: [master]
     types: 
       - completed
   workflow_dispatch: null    
