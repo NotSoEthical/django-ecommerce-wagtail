@@ -69,7 +69,7 @@ MIDDLEWARE = [
 X_FRAME_OPTIONS = 'DENY'
 #X-Content-Type-Options
 SECURE_CONTENT_TYPE_NOSNIFF = True
-CSRF_COOKIE_SECURE = True
+##CSRF_COOKIE_SECURE = True
 
 ROOT_URLCONF = 'snipcartwagtaildemo.urls'
 
